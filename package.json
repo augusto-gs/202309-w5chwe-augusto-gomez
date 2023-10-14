@@ -2,9 +2,12 @@
   "name": "202309-w5chwe-augusto-gomez",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/index.js",
+  "type": "module",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "node .",
+    "start:dev": "node --watch index.js"
   },
   "keywords": [],
   "author": "",
