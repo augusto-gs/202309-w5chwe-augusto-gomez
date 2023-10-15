@@ -1,5 +1,4 @@
 import World from "../public/World/World.js";
-import Cells from "../public/Cells/Cells.js";
 
 const board = new World();
 // Console.log(cells);
