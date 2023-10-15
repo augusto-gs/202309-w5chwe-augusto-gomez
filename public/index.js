@@ -1,10 +1,18 @@
 import World from "../public/World/World.js";
 import Cells from "../public/Cells/Cells.js";
 
-const cells = new Cells();
-
-const board = new World(cells);
+const board = new World();
 // Console.log(cells);
 // console.log(board.cells[0][1]);
 
-console.log(board.cellInit());
+board.cellInit();
+
+board.cells[1][1].live();
+board.cells[2][0].live();
+board.cells[2][1].live();
+
+console.log(board);
+
+board.countNeighbours(2, 0);
+
+console.log(board.cells[2][0].neighbours);
