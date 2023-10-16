@@ -1,6 +1,7 @@
 class Cells {
   isAlive = false;
   neighbours;
+
   die() {
     this.isAlive = false;
   }
@@ -11,6 +12,16 @@ class Cells {
 
   state() {
     return this.isAlive;
+  }
+
+  changeState() {
+    if (this.neighbours === 2) {
+      this.isAlive = this.isAlive;
+    } else if (this.neighbours === 3) {
+      this.live();
+    } else {
+      this.die();
+    }
   }
 }
 export default Cells;
