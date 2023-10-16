@@ -3,10 +3,10 @@ import Cells from "../Cells/Cells.js";
 class World {
   cells = [];
 
-  cellInit(...arg) {
-    for (let j = 0; j < 3; j++) {
-      this.cells[j] = arg;
-      for (let i = 0; i < 3; i++) {
+  cellInit(length) {
+    for (let j = 0; j < length; j++) {
+      this.cells[j] = [];
+      for (let i = 0; i < length; i++) {
         this.cells[j][i] = new Cells();
       }
     }
@@ -16,7 +16,7 @@ class World {
 
   countNeighbours(indexRow, indexColumn) {
     let counter = 0;
-    const length = 3;
+    const length = 10;
 
     const myCell = this.cells[indexRow][indexColumn];
     const leftRow = indexRow - 1 === -1 ? 0 : indexRow - 1;
